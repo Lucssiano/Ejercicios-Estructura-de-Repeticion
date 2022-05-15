@@ -12,6 +12,26 @@ using namespace std;
 
 int main()
 {
+  int a = 0, b = 0, c = 0, d = 0;
+  unsigned sueldo;
+  do
+  {
+    cout << "Ingrese el sueldo del empleado: ";
+    cin >> sueldo;
+    if (sueldo < 900 && sueldo != 0)
+      a++;
+    if (sueldo >= 900 && sueldo < 1200)
+      b++;
+    if (sueldo >= 1200 && sueldo < 2000)
+      c++;
+    if (sueldo >= 2000)
+      d++;
+  } while (sueldo != 0);
+
+  cout << a << " empleados ganan menos de $900" << endl;
+  cout << b << " empleados ganan $900 o mas, pero menos de $1200" << endl;
+  cout << c << " empleados ganan $1200 o mas, pero menos de $2000" << endl;
+  cout << d << " empleados ganan $2000 o mas" << endl;
 
   return 0;
 }

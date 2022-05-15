@@ -13,5 +13,44 @@ using namespace std;
 int main()
 {
 
+  int k, puntos, puntajeTotal;
+  string nombEquipo;
+  char cod;
+
+  cout << "Indique la cantidad de equipos que participan del torneo de futbol ";
+  cin >> k;
+
+  for (int i = 0; i < k; i++)
+  {
+    cout << "Ingrese el nombre del equipo ";
+    cin >> nombEquipo;
+
+    puntajeTotal = 0;
+
+    for (int i = 0; i < k; i++)
+    {
+      cout << "Ingrese el codigo del resultado del partido ";
+      cin >> cod;
+
+      switch (cod)
+      {
+      case 'G':
+      case 'g':
+        puntos = 3;
+        break;
+      case 'E':
+      case 'e':
+        puntos = 1;
+        break;
+      case 'P':
+      case 'p':
+        puntos = 0;
+        break;
+      }
+      puntajeTotal += puntos;
+    }
+    cout << nombEquipo << " obtuvo " << puntajeTotal << " puntos" << endl;
+  }
+
   return 0;
 }

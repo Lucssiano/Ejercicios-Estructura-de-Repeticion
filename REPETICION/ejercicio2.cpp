@@ -17,4 +17,5 @@ int main()
     cin >> nombreAlumno >> nota1 >> nota2;
     cout << "El promedio del alumno " << nombreAlumno << " es: " << (nota1 + nota2) / 2 << endl;
   }
+  return 0;
 }

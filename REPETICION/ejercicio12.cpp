@@ -6,6 +6,18 @@ using namespace std;
 
 int main()
 {
+  int n;
+  unsigned factorial = 1;
+  cout << "Ingrese un numero entero positivo ";
+  cin >> n;
+
+  for (int i = 1; i <= n; i++)
+  {
+    // cout << factorial << endl;
+    factorial *= i;
+  }
+
+  cout << "El factorial de " << n << " es: " << factorial;
 
   return 0;
 }
