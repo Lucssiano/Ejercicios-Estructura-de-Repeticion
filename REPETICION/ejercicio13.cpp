@@ -16,7 +16,7 @@ int main()
     cout << "Ingrese un numero entero positivo ";
     cin >> n;
     sumNum += n;
-    if (n != 0) // No me convence
+    if (n != 0)
       cantNum++;
   } while (n > 0);
 

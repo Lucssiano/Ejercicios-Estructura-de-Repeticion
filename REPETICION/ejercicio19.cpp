@@ -10,6 +10,7 @@ using namespace std;
 
 int main()
 {
-
+  int numCuenta, saldoActual;
+  string nombreCliente;
   return 0;
 }

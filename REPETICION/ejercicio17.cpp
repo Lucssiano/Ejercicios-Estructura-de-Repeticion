@@ -8,19 +8,38 @@ using namespace std;
 
 int main()
 {
+  int cantEq = 0, cantIs = 0, cantEs = 0;
+  float lado1, lado2, lado3;
 
-  // float lado1, lado2, lado3;
-  // cout << "Ingrese tres lados de un triangulo ";
-  // cin >> lado1 >> lado2 >> lado3;
+  do
+  {
+    cout << "Ingrese tres lados de un triangulo ";
+    cin >> lado1 >> lado2 >> lado3;
 
-  // // Isosceles considerando que lado 1 y lado 2 son los de la izquierda y derecha del triángulo
-  // if (lado1 == lado2 && lado1 != lado3)
-  //   cout << "El triangulo es isosceles";
+    if (lado1 != 0 && lado2 != 0 && lado3 != 0)
+    {
+      // Isosceles considerando que lado 1 y lado 2 son los de la izquierda y derecha del triángulo
+      if (lado1 == lado2 && lado1 != lado3)
+      {
+        cout << "El triangulo es isosceles" << endl;
+        cantIs++;
+      }
+      else if (lado1 == lado2 && lado1 == lado3)
+      {
+        cout << "El triangulo es equilatero" << endl;
+        cantEq++;
+      }
+      else
+      {
+        cout << "El triangulo es escaleno" << endl;
+        cantEs++;
+      }
+    }
+  } while (lado1 != 0 && lado2 != 0 && lado3 != 0);
 
-  // if (lado1 == lado2 && lado1 == lado3)
-  //   cout
-  //       << "El triangulo es equilatero";
-  // else
-  //   cout << "El triangulo es escaleno";
-  // return 0;
+  cout << "Hay " << cantIs << " triangulos isosceles" << endl;
+  cout << "Hay " << cantEq << " triangulos equilateros" << endl;
+  cout << "Hay " << cantEs << " triangulos escalenos" << endl;
+
+  return 0;
 }

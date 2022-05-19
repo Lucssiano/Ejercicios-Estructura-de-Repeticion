@@ -24,4 +24,6 @@ int main()
   prom = sumaNums / n;
 
   cout << "Promedio de los numeros enteros ingresados: " << prom;
+
+  return 0;
 }
