@@ -10,7 +10,16 @@ using namespace std;
 
 int main()
 {
-  int numCuenta, saldoActual;
-  string nombreCliente;
+  int numCuenta, saldoActual, cantSaldoAcreedor = 0, cantSaldoDeudor = 0, cantSaldoNulo = 0;
+  string nombreCliente, estado;
+
+  cout << "Ingrese los datos de la cuenta" << endl;
+  cout << "Numero de cuenta: ";
+  cin >> numCuenta;
+  cout << "Nombre del cliente: ";
+  cin >> nombreCliente;
+  cout << "Saldo de cuenta: ";
+  cin >> saldoActual;
+
   return 0;
 }

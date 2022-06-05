@@ -8,21 +8,27 @@ using namespace std;
 
 int main()
 {
-  int n = 0, sumNum = 0, cantNum = 0;
+  int n, sumNum = 0, cantNum = 0;
   float prom;
 
-  do
+  cout << "Ingrese un numero entero positivo ";
+  cin >> n;
+
+  while (n != 0)
   {
+    sumNum += n;
+    cantNum++;
     cout << "Ingrese un numero entero positivo ";
     cin >> n;
-    sumNum += n;
-    if (n != 0)
-      cantNum++;
-  } while (n > 0);
+  }
 
-  prom = (float)sumNum / cantNum;
-
-  cout << "El promedio de los numeros enteros positivos ingresados por teclado es: " << prom;
+  if (cantNum != 0)
+  {
+    prom = (float)sumNum / cantNum;
+    cout << "El promedio de los numeros enteros positivos ingresados por teclado es: " << prom;
+  }
+  else
+    cout << "No hubo numeros, cero fue el primero" << endl;
 
   return 0;
 }

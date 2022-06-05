@@ -16,20 +16,18 @@ int main()
     {
       mayor1 = num;
       mayor2 = num;
-      cout << mayor1 << " mayor1 " << num << endl;
-      cout << mayor2 << " mayor2 " << num << endl;
-    }
-    if (num > mayor1)
-    {
-      mayor1 = num;
-      cout << mayor1 << " mayor1 " << num << endl;
     }
     else
     {
-      if (num > mayor2)
+      if (num > mayor1)
       {
-        mayor2 = num;
-        cout << mayor2 << " mayor2 " << num << endl;
+        mayor2 = mayor1;
+        mayor1 = num;
+      }
+      else
+      {
+        if (num > mayor2)
+          mayor2 = num;
       }
     }
   }

@@ -11,9 +11,12 @@ int main()
   cout << "Ingrese un numero entero positivo entre 1 y 3999: ";
   cin >> num;
 
-  if (num >= 1 && num <= 3999)
+  while (num >= 1 && num <= 3999)
   {
-    }
+
+    cout << "Ingrese un numero entero positivo entre 1 y 3999: ";
+    cin >> num;
+  }
 
   return 0;
 }
