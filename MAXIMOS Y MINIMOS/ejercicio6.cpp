@@ -9,43 +9,48 @@ using namespace std;
 
 int main()
 {
-  int dia, mes, año, sumaFecha = 0, mayorEdad, menorEdad, i;
+  int edad, mayorEdad, menorEdad;
+  bool pri = true;
   string nombre, personaConMayorEdad, personaConMenorEdad;
 
-  do
-  {
-    cout << "Ingrese un nombre: ";
-    cin >> nombre;
-    cout << "Ingrese una fecha en formato AAAA/MM/DD: ";
-    cin >> año >> mes >> dia;
-    sumaFecha = (año * 10000) + (mes * 100) + dia;
+  cout << "Ingrese un nombre (fin para terminar): ";
+  cin >> nombre;
 
-    if (i == 0)
+  while (nombre != "fin")
+  {
+    cout << "Ingrese una fecha de nacimiento en formato AAAAMMDD: ";
+    cin >> edad;
+
+    if (pri)
     {
-      mayorEdad = sumaFecha;
-      menorEdad = sumaFecha;
+      mayorEdad = edad;
+      menorEdad = edad;
+      personaConMayorEdad = nombre;
+      personaConMenorEdad = nombre;
+      pri = false;
     }
     else
     {
-      if (mayorEdad < sumaFecha)
+      if (edad > mayorEdad)
       {
-        mayorEdad = sumaFecha;
+        mayorEdad = edad;
         personaConMayorEdad = nombre;
       }
       else
       {
-        if (menorEdad > sumaFecha)
+        if (edad < menorEdad)
         {
-          menorEdad = sumaFecha;
+          menorEdad = edad;
           personaConMenorEdad = nombre;
         }
       }
     }
-
-  } while (nombre != "fin");
+    cout << "Ingrese un nombre (fin para terminar): ";
+    cin >> nombre;
+  }
 
   cout << "La persona con menor edad es: " << personaConMenorEdad << endl;
   cout << "La persona con mayor edad es: " << personaConMayorEdad << endl;
-}
 
-// Parecido al 6 de DECISION
+  return 0;
+}
