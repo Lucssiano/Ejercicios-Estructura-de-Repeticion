@@ -1,37 +1,42 @@
-// 4- Dados 5 valores distintos que se ingresan por teclado, mostrar los dos mayores.
-
 #include <iostream>
 
 using namespace std;
 
+/*
+Dados 5 valores distintos que se ingresan por teclado, mostrar los dos mayores
+
+*/
+
 int main()
 {
-  int num, mayor1, mayor2;
+  int num, mayoruno, mayordos;
 
   for (int i = 0; i < 5; i++)
   {
-    cout << "Ingresar un numero: ";
+    cout << "ingrese numero: ";
     cin >> num;
+
     if (i == 0)
     {
-      mayor1 = num;
-      mayor2 = num;
+      mayoruno = num;
     }
     else
     {
-      if (num > mayor1)
+      if (i == 1)
+        mayordos = num;
+      else if (num > mayoruno)
       {
-        mayor2 = mayor1;
-        mayor1 = num;
+        mayordos = mayoruno;
+        mayoruno = num;
       }
-      else
+      else if (num > mayordos)
       {
-        if (num > mayor2)
-          mayor2 = num;
+        mayordos = num;
       }
     }
   }
 
-  cout << "Los dos numeros mayores de los ingresados son: " << mayor1 << " y  " << mayor2;
+  cout << "los números más grandes son: " << mayoruno << " y " << mayordos;
+
   return 0;
 }

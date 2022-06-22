@@ -20,5 +20,39 @@ using namespace std;
 
 int main()
 {
+  int identificacion, pesoContenedor, puerto, mayorPeso, cantContenedores = 0, contenedorConMayorPeso;
+  float pesoTotal = 0;
+
+  cout << "Ingrese la identificacion del contenedor (0 para finalizar): ";
+  cin >> identificacion;
+
+  if (identificacion == 0)
+    cout << "No hubo ingreso de datos" << endl;
+
+  while (identificacion != 0)
+  {
+    cout << "Ingrese el peso del contenedor: ";
+    cin >> pesoContenedor;
+
+    if (cantContenedores == 0 || pesoContenedor > mayorPeso)
+    {
+      mayorPeso = pesoContenedor;
+      contenedorConMayorPeso = identificacion;
+    }
+
+    pesoTotal += pesoContenedor;
+    cantContenedores++;
+
+    cout << "Ingrese el puerto de arribo (un valor de 1 a 3): ";
+    cin >> puerto;
+
+    cout << "Ingrese la identificacion del contenedor (0 para finalizar): ";
+    cin >> identificacion;
+  }
+
+  cout << "El peso total que el buque debe trasladar es: " << pesoTotal << " kg" << endl;
+  cout << "La identificacion del contenedor de mayor peso es: " << contenedorConMayorPeso << endl;
+  cout << "La cantidad de contenedores que debe trasladar a cada puerto es: " << cantContenedores << endl;
+
   return 0;
 }
